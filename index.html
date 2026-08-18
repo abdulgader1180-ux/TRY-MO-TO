@@ -1,0 +1,245 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Phishing Awareness</title> 
+ 
+    <style> 
+ 
+        body { 
+            font-family: Arial; 
+            background: linear-gradient(-45deg, #ff0a0a ,#000000); 
+            background-size: 400% 400%; 
+            animation: backgroundMove 8s ease infinite; 
+            text-align: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding-top: 1px; 
+        } 
+ 
+        @keyframes backgroundMove { 
+            0% { 
+                background-position: 0% 50%; 
+            } 
+ 
+            50% { 
+                background-position: 100% 50%; 
+            } 
+ 
+            100% { 
+                background-position: 0% 50%; 
+            } 
+        } 
+ 
+        .box { 
+            background-color: white; 
+            width: 350px; 
+            margin: 80px auto; 
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); 
+        } 
+ 
+        input { 
+            width: 90%; 
+            padding: 10px; 
+            margin: 7px; 
+            border: 1px solid #aaa; 
+            border-radius: 5px; 
+        } 
+ 
+        button { 
+            background-color: black; 
+            color: white; 
+            padding: 10px 25px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin: 5px; 
+        } 
+ 
+        button:hover { 
+            background-color: red; 
+        } 
+ 
+        #login, 
+        #signup, 
+        #result { 
+            display: none; 
+        } 
+ 
+        #home { 
+            display: block; 
+        } 
+ 
+        #result { 
+            background-color: black; 
+            color: white; 
+        } 
+ 
+        .prank { 
+            color: red; 
+            font-size: 30px; 
+        } 
+ 
+    </style> 
+</head> 
+ 
+<body> 
+ 
+    <!-- HOME --> 
+ 
+    <div class="box" id="home"> 
+ 
+        <h1>Login</h1> 
+ 
+        <p>For free load</p> 
+ 
+        <button onclick="showLogin()">Log In</button> 
+ 
+        <button onclick="showSignup()">Sign Up</button> 
+ 
+    </div> 
+ 
+ 
+    <!-- LOGIN --> 
+ 
+    <div class="box" id="login"> 
+ 
+        <h1>Log In</h1> 
+ 
+        <p>Enter your account.</p> 
+ 
+        <input type="text" placeholder="Number"> 
+ 
+        <input type="password" placeholder="Password"> 
+ 
+        <br> 
+ 
+        <button onclick="showResult()">Log In</button> 
+ 
+        <br> 
+ 
+        <button onclick="showHome()">Back</button> 
+ 
+    </div> 
+ 
+ 
+    <!-- SIGN UP --> 
+ 
+    <div class="box" id="signup"> 
+ 
+        <h1>Sign Up</h1> 
+ 
+        <p>Create a new account.</p> 
+ 
+        <input type="text" placeholder="Full Name"> 
+ 
+        <input type="text" placeholder="Number"> 
+ 
+        <input type="password" placeholder="Password"> 
+ 
+        <br> 
+ 
+        <!-- After Sign Up, go to Login --> 
+ 
+        <button onclick="showLogin()">Sign Up</button> 
+ 
+        <br> 
+ 
+        <button onclick="showHome()">Back</button> 
+ 
+    </div> 
+ 
+ 
+    <!-- PRANK / SIMULATION --> 
+ 
+    <div class="box" id="result"> 
+ 
+        <h1 class="prank">IT'S A PRANK!</h1> 
+ 
+        <h1>Phishing Awareness</h1> 
+ 
+        <p> 
+            Wag ka mag alala, activity lang namin to! 
+        </p> 
+ 
+        <p> 
+            <b> 
+                No password or personal information 
+                was collected or saved. 
+            </b> 
+        </p> 
+ 
+        <hr> 
+ 
+        <h3>🔐 Stay Safe Online</h3> 
+ 
+        <p> 
+            Kaka-click mo, baka ma-scam account mo HAHAHAH 
+        </p> 
+ 
+        <h3>Remember:</h3> 
+ 
+        <p> 
+            <b>THINK BEFORE YOU CLICK</b> 
+        </p> 
+ 
+        <button onclick="showHome()">Back to Home</button> 
+ 
+    </div> 
+ 
+ 
+    <script> 
+ 
+        function hideAll() { 
+ 
+            document.getElementById("home").style.display = "none"; 
+ 
+            document.getElementById("login").style.display = "none"; 
+ 
+            document.getElementById("signup").style.display = "none"; 
+ 
+            document.getElementById("result").style.display = "none"; 
+ 
+        } 
+ 
+ 
+        function showHome() { 
+ 
+            hideAll(); 
+ 
+            document.getElementById("home").style.display = "block"; 
+ 
+        } 
+ 
+ 
+        function showLogin() { 
+ 
+            hideAll(); 
+ 
+            document.getElementById("login").style.display = "block"; 
+ 
+        } 
+ 
+ 
+        function showSignup() { 
+ 
+            hideAll(); 
+ 
+            document.getElementById("signup").style.display = "block"; 
+ 
+        } 
+ 
+ 
+        function showResult() { 
+ 
+            hideAll(); 
+ 
+            document.getElementById("result").style.display = "block"; 
+ 
+        } 
+ 
+    </script> 
+
+</body> 
+</html>
